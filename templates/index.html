@@ -2,4 +2,42 @@
 
 {% block title %} typeFast {% endblock %}
 
-{% block body %} <h1>typeFast camelCase</h1> {% endblock %}
+{% block body %} 
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 py-5">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue imperdiet ornare. In velit magna, efficitur suscipit mollis sed, elementum iaculis leo. Donec ac dui mattis, porta lorem nec, ultricies turpis. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue imperdiet ornare. In velit magna, efficitur suscipit mollis sed, elementum iaculis leo. Donec ac dui mattis, porta lorem nec, ultricies turpis. 
+        
+        </p>
+        </div>
+        <div class="col-sm-4 py-5">
+            <form action="/" method="post">
+                <select name="caseType" id="caseType">
+                    <option value="camelCase">camelCase</option>
+                    <option value="snakeCase">snake_case</option>
+                    <option value="kebabCase">kebab-case</option>
+                </select>
+                <button type="submit" class="btn btn-dark">Submit Case</button>
+            </form>
+            </div>
+            
+    <div class="row">
+        <div class="col-sm-8 py-3">
+        <form action="/" method="post">
+            <div class="mb-3">
+              <input autocomplete="off" autofocus class="form-control" id="typedText" name="typedText" placeholder="Start typing">
+              <div id="typingHelp" class="form-text">Type everything with correct case and submit.</div>
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+        
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
