@@ -48,7 +48,7 @@ TODO
 
 First task in the word generator algorithm was to prepare the base words to be used later in combination with others to create "cased" words.
 I searched for top 500 common words in English and downloaded an Excel file containing the words and other additional info like frequency, order and etc. As I only needed the words, I saved the file as .csv and created a short python app to create a new file only with the data I needed. This the few lines of python that enabled me to extract the words:
-```
+```python
 import csv
 
 database = []
