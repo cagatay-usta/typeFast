@@ -4,6 +4,8 @@
 
 typeFast is a web app to practice typing different naming conventions such as camelCase, snake_case and kebab-case.
 
+typeFast is developed as the final project for the CS50 course, with the timeframe of 14 days.
+
 ## Languages and Frameworks
 
 I used html, css, javaScript for the front-end with bootstrap, and python, flask and sqlite3 for the back-end.
