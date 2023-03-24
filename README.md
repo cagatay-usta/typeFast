@@ -43,3 +43,27 @@ typing without any distractions or unrelated features.
 ### Algorithms and Database
 
 TODO
+
+### Word Generator Algorithm
+
+First task in the word generator algorithm was to prepare the base words to be used later in combination with others to create "cased" words.
+I searched for top 500 common words in English and downloaded an Excel file containing the words and other additional info like frequency, order and etc. As I only needed the words, I saved the file as .csv and created a short python app to create a new file only with the data I needed. This the few lines of python that enabled me to extract the words:
+```
+import csv
+
+database = []
+with open("english-word-list-total.csv") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        database.append(row)
+
+newDatabase = []
+for row in database:
+    newDatabase.append(row['word'])
+
+with open('500-words', 'w', newline='') as newFile:
+    writer = csv.writer(newFile)
+    for row in newDatabase:
+        writer.writerow([row])
+
+```
