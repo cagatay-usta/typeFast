@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import sqlite3
-
+import csv
+from helper_functions import word_generator
 
 app = Flask(__name__)
 
@@ -8,6 +9,15 @@ app = Flask(__name__)
 # connect to sqlite database
 con = sqlite3.connect("typefast.db")
 db = con.cursor()
+
+
+# store the words to memory from the csv
+with open("500-words.csv") as file:
+    words = [word.rstrip() for word in file]
+
+
+
+
 
 
 # main route 
