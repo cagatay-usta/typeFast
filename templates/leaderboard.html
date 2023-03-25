@@ -9,11 +9,18 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Name</th>
                 <th>WPM</th>
                 <th>Date</th>
             </tr>
         </thead>
+        <tbody>
+            {% for wpm, time in records %}
+            <tr>
+                <td>{{ "%.1f" | format(wpm) }}</th>
+                <td>{{ time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
 
 </div>

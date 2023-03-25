@@ -9,9 +9,13 @@
     <div class="row">
         <div class="col-sm-8 py-5">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue imperdiet ornare. In velit magna, efficitur suscipit mollis sed, elementum iaculis leo. Donec ac dui mattis, porta lorem nec, ultricies turpis. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue imperdiet ornare. In velit magna, efficitur suscipit mollis sed, elementum iaculis leo. Donec ac dui mattis, porta lorem nec, ultricies turpis. 
-        
+            {% if casedWords %}
+                {% for word in casedWords %}
+                {{ word }}  
+                {% endfor %}
+            {% else %}
+                <h2>WPM: {{ "%.1f" | format(wpm) }}</h2>
+            {% endif %}
         </p>
         </div>
         <div class="col-sm-4 py-5">
@@ -21,15 +25,21 @@
                     <option value="snakeCase">snake_case</option>
                     <option value="kebabCase">kebab-case</option>
                 </select>
-                <button type="submit" class="btn btn-dark">Submit Case</button>
+                <button type="submit" class="btn btn-dark">Select Case</button>
             </form>
+            <div class="py-5">
+            <h3 id="countdownTimer" class="btn btn-dark">60</h3>
+            <h3 id="startTimer" class="btn btn-dark">Start Timer</h3>
             </div>
-            
+            </div>
+
     <div class="row">
         <div class="col-sm-8 py-3">
-        <form action="/" method="post">
+        <form action="/" method="post" id="typedForm">
             <div class="mb-3">
               <input autocomplete="off" autofocus class="form-control" id="typedText" name="typedText" placeholder="Start typing">
+              <input type="hidden" id="shownWords" name="shownWords" value="{{ casedWords }}">
+              <input type="hidden" id="timeLeft" name="timeLeft" value="0">
               <div id="typingHelp" class="form-text">Type everything with correct case and submit.</div>
             </div>
             <button type="submit" class="btn btn-dark">Submit</button>
@@ -39,5 +49,6 @@
     </div>
 </div>
 
+<script src="/static/countdown.js"></script>
 
 {% endblock %}
