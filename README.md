@@ -1,5 +1,5 @@
 # typeFast
-#### Video Demo:  <URL HERE>
+#### Video Demo:  <URL https://youtu.be/tbQGOzF0Ypo>
 #### Description:
 
 typeFast is a web app to practice typing different naming conventions such as camelCase, snake_case and kebab-case.
@@ -95,7 +95,7 @@ I kept all my sql query logs in queries.sql to avoid typos and backtracking when
 After setting up the database, both inserting new entries and displaying them in the leaderboard was easy. 
 
 ### Future Improvements
-Although I am content with the current state of it for the final project, there are some features I had in my mind when desinging that couldn't make it into the final product due to time constraints. However, I specifically designed the whole project with the intention of adding more features later, thus in a modular design. Here are some ideas of new features and improvements:
+Although I am content with the current state of it for the final project, there are some features I had in my mind when designing that couldn't make it into the final product due to time constraints. However, I specifically designed the whole project with the intention of adding more features later, thus in a modular design. Here are some ideas of new features and improvements:
 - Using AJAX to display current WPM
 - User login to see individual WPM records
 - More case convention types
